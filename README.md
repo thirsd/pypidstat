@@ -6,9 +6,7 @@
 
 ### 1.1. 进程信息（ProcessStat）
 1. 进程attrs属性信息 
-
- 
-    （comm、cmdline、exe、environ、sessionid、oom_score、uid、gid、owner）
+> （comm、cmdline、exe、environ、sessionid、oom_score、uid、gid、owner）
 
 2. stat_info信息（/proc/$pid/stat）
 
@@ -178,3 +176,4 @@ Time                 PID    User    %usr   %sys   %guest %wait  %CPU   CPU_ID  m
     -l          ：展示命令的完整cmdline
     2 10        ：间隔为2秒，输出次数为10
 
+same to: https://gitee.com/thirsd/pypidstat

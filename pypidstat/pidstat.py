@@ -93,8 +93,8 @@ def main(args):
         if args.dev is not None:
             dev = args.dev
         else:
-            from .net import get_dev_interface
-            dev = [dev_name for dev_name, dev_dict in get_dev_interface() if dev_name != 'l0'][0]
+            from pypidstat.net import get_dev_interface
+            dev = [dev_name for dev_name, dev_dict in get_dev_interface().items() if dev_name != 'lo'][0]
         # 启动进程网卡的统计线程
         global_proc_net_traffic = ProcNetStat(dev=dev, pids=args.pids, cmd_regex=args.comm_regex, interval=1)
     else:
